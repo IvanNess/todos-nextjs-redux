@@ -8,8 +8,7 @@ export const Todos = () => {
 
     return (
         <TodosStyled>
-            {todos &&
-                todos.map((todo) => <Todo item={todo} key={todo.id + ''} />)}
+            {todos && todos.map((todo) => <Todo item={todo} key={todo.id} />)}
         </TodosStyled>
     )
 }

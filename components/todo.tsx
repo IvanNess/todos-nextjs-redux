@@ -50,13 +50,9 @@ const Todo: React.FC<{ item: ITodo }> = ({ item }) => {
             {!isEdit && <div className="todo-name">{item.name}</div>}
             {isEdit && <EditTodo item={item} />}
             {/* <p>{item.priority + ''}</p> */}
-            {item.id && !isEdit && (
-                <button onClick={() => onTopClicked()}>ON TOP</button>
-            )}
-            {item.id && !isEdit && (
-                <button onClick={() => editClicked()}>EDIT</button>
-            )}
-            {item.id && !isEdit && (
+            {!isEdit && <button onClick={() => onTopClicked()}>ON TOP</button>}
+            {!isEdit && <button onClick={() => editClicked()}>EDIT</button>}
+            {!isEdit && (
                 <button className="delete-btn" onClick={() => deleteClicked()}>
                     Delete
                 </button>
